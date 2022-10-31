@@ -1,0 +1,1073 @@
+// переменные
+$primary-text-color: #212121;
+$pure-black-color: #000000;
+$secondary-text-color: #757575;
+$accent-color: #2196F3;
+$accent-color-active-button: #188CE8;
+$primary-white-color: #ffffff;
+$calm-button-bg-color:#F5F4FA;
+$transp-foot-text-color: rgba(100%, 100%, 100%, 60%);
+$secondary-bkg-color: #2F303A;
+$bordering-color: #ECECEC;
+$hero-gradient-color: rgba(47, 48, 58, 0.4);
+$clients-border-color: #AFB1B8;
+
+body {
+    color: $primary-text-color;
+    background-color: $primary-white-color;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    position: relative;
+    padding-top: 80px;
+}
+
+// утиліти
+// чистка оформленння списків
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+// контейнер для центрування контенту
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.conteiner__main-nav {
+    display: flex;
+}
+
+//ховаємо заголовки
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+// загальний опис секцій
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    &--no-padding-top {
+            padding-top: 0;
+        }
+    &--secondary-bkg {
+        background-color: $calm-button-bg-color;
+        }
+}
+.section__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+
+
+
+
+//хедер та навігація
+.header {
+    display: block;
+    border-bottom: 1px solid $bordering-color;
+    background-color: $primary-white-color;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;//максимальне значення більше тільки у модального вікна
+}
+
+//логотип
+.logo{
+    margin-right: 93px;
+    color: $pure-black-color;
+    padding: 10px 0;
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+//перша частина лого 
+.logo__first-part{
+    color: $accent-color;
+}
+
+//стиль меню навігації 
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav,
+.cont-nav {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+// встановлюємо відстань між єлементами меню навігації
+.site-nav__item {
+    margin-right: 50px;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.site-nav__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $primary-text-color;
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    //ховер і фокус у навігації
+    &:hover, &:focus{ 
+        color: $accent-color;
+    }
+
+    //індикація актикного(поточного) пункту меню(сторінки) у навигації
+    &--current{
+        color: $accent-color;
+        &::after{
+                content: '';
+                
+                    position: absolute;
+                    bottom: 0;
+                
+                    display: block;
+                    width: 100%;
+                    height: 4px;
+                    border-radius: 2px;
+                    background-color: $accent-color;
+        }
+    }
+}
+
+// контакти у хедері
+.cont-nav{
+    margin-left: auto;
+    flex-direction: row;
+}
+.cont-nav__link {
+    display: flex;
+    align-items: center;
+    color: currentColor;
+    text-decoration: none;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus{
+        color: $accent-color;
+    }
+}
+
+.cont-nav__item{
+    color: $secondary-text-color;
+    margin-right: 30px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.cont-nav__icon{
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+//cекція головна ідея
+.hero {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $secondary-bkg-color;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/main-bkg-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+//заголовок головної ідеї
+
+.hero__title {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0 200px;
+
+    color: $primary-white-color;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.364;
+    /* если поставить множитель 1.36 - тогда размер блока будет меньше на 2px */
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+//кнопка
+.button {
+    border-radius: 4px;
+    border: transparent;
+
+    height: 50px;
+    padding: 0;
+    color: $primary-white-color;
+    background-color: $accent-color;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    align-items: center;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+// кнопка замовлення послуги
+.hero__button {
+    width: 216px;
+}
+
+// модальне вікно замовити послугу -головна сторінка герой
+.backdrop {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    scale: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--hidden{
+        opacity: 0;
+        pointer-events: none;
+        
+        .order-window {
+                scale: 0;
+                opacity: 0;
+                transform: translate(-50%, -50%);
+                transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+    }
+}
+
+/* кнопка закриття модального вікна */
+.btn-modal-close {
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-white-color);
+
+    cursor: pointer;
+}
+//зображення кнопки закриття модального вікна
+.btn-modal-close__icon {
+    fill: var(--pure-black-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .btn-modal-close:hover &{
+        fill:$accent-color
+    }
+}
+// вікно замовлення послуги
+.order-window {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    height: 581px;
+
+    background-color: $primary-white-color;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    scale: 1;
+    opacity: 1;
+}
+
+//оформлення полів вводу інформації про клієнта 
+.client-form {
+    position: relative;
+
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+
+    padding: 40px;
+}
+
+//заголовок форми 
+.client-form__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+//список полів форми
+.client-form__fields-list {
+    margin-bottom: 20px;
+}
+
+// оформлення полів
+.form-field {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 12px;
+}
+
+//оформлення мітки(лейблу) поля вводу
+.form-field__label {
+    margin-bottom: 4px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $secondary-text-color;
+}
+
+//оформлення поля вводу інформації 
+.form-field__input {
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus, &:focus~.form-field__icon{
+        fill: $accent-color;
+        border-color: $accent-color;
+    }
+}
+
+//оформлення поля вводу з коментарем
+.form-field__textarea{
+    resize: none;
+    height: 120px;
+    margin: 0;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:focus{
+            fill: $accent-color;
+            border-color: $accent-color;
+        }
+        &::placeholder{ //плейсхолдер(приклад) для поля вводу коментаря
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
+}
+
+//оформлення іконки 
+.form-field__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    display: block;
+    line-height: 0px;
+    color: currentColor;
+}
+
+//зголошення на розсилку в модальному вікні
+.policy {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $secondary-text-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.72;
+}
+
+//первинний стан кастомного чекбоксу
+.policy__icon {
+    display: flex;
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    border: solid 2px $pure-black-color;
+
+    opacity: 1;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    //активний стан чекбоксу
+    &--checked{
+        position: absolute;
+        
+            top: 50%;
+            left: 17px;
+        
+            transform: translateY(-50%);
+        
+            border-radius: 2px;
+            background: $accent-color;
+            width: 16px;
+            height: 15px;
+            fill: white;
+        
+            opacity: 0;
+            scale: 0.2;
+            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+//ховаємо оригінальний чекбокс
+.policy__checkbox {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked~.policy__icon--checked{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+//оформлення посилання на умови договору
+.policy__link {
+    color: $accent-color;
+}
+
+/* кнопка відправити форму */
+.send-form__button {
+    width: 200px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus{
+        background-color: $accent-color-active-button;
+    }
+}
+
+//cекція инструменти
+.instruments-list {
+    display: flex;
+}
+
+.instrument {
+    width: 270px;
+    margin-right: 30px;
+    &:last-child {
+            margin-right: 0;
+        }
+}
+
+.instrument__area {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    background-color: $calm-button-bg-color;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+// іконка для інструментів 
+.instrument__icon {
+    height: 70px;
+    width: 70px;
+}
+
+//стиль для заголовків інструментів
+.instrument__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+//стиль для опису інструментів
+.instrument__text {
+    color: $secondary-text-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.72;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0.03em;
+}
+
+
+//секція чим ми займаємось
+.service-list {
+    display: flex;
+}
+
+.service {
+    position: relative;
+}
+
+.service {
+    margin-right: 30px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.service__img {
+    display: block;
+}
+
+.service__title {
+    display: flex;
+    position: absolute;
+
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: $primary-white-color;
+    margin: 0;
+}
+
+
+//секція наша команда
+.team-list {
+    display: flex;
+}
+
+//картка члена команди
+.team-member {
+    background-color: $primary-white-color;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+//відстань між картками і чистка після останнього елементу
+.team-member {
+    margin-right: 30px;
+    &:last-child {
+            margin: 0;
+        }
+}
+
+//опис тіммейта 
+.team-member__description {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+// фото тіммейта
+.team-member__photo {
+    display: block;
+
+}
+
+//піб тіммейта
+.team-member__title {
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+//позиція тіммейта
+.team-member__position {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: $secondary-text-color;
+}
+
+//посилання на соціальні мережі в картках тіммейтів
+.social-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//відстань між областями соціальних мереж і чистка після останнього елементу
+.social-area__item {
+    margin-right: 10px;
+    &:last-child {
+            margin-right: 0;
+        }
+}
+
+
+// посилання на соціальну мережу
+.social-area__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $clients-border-color;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover, &:focus{
+        background-color: $accent-color;
+        color: $primary-white-color;}
+    //для футера інверс
+    &--inverse{
+        color: $primary-white-color;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+}
+
+// іконка соціальної мережі
+.social-area__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+//стилі для постійних клієнтів 
+.clients-list {
+    display: flex;
+}
+
+.company {
+    margin-right: 30px;
+    &:last-child {
+            margin-right: 0;}
+
+}
+
+
+.company__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $clients-border-color;
+    border-radius: 4px;
+    color: $clients-border-color;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus{
+        color: $accent-color;
+        border-color: $accent-color;
+    }
+}
+
+.company__icon {
+    height: 60px;
+    width: 106px;
+    fill: currentColor;
+}
+
+/* футер */
+.footer {
+    background-color: $secondary-bkg-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__information {
+    display: flex;
+    align-items: baseline;
+}
+
+
+//контейнер адресси 
+.footer__adress-area {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    padding-top: 20px;
+    width: 231px;
+}
+
+//перелік контактів(адресс) у футері */
+.adress {}
+
+// зміна кольору лого в футері */
+.footer__logo {
+    color: $primary-white-color;
+    margin-right: 0;
+    padding: 0;
+}
+
+// колір емайлу та телефону в футері */
+.adress__link {
+    color: $transp-foot-text-color;
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus{
+        color: $accent-color}
+}
+
+.adress__link--white {
+    color: $primary-white-color;
+}
+
+//відстань між елементами переліку контактів в футері
+.adress__item {
+    margin-bottom: 9px;
+    &:last-child {
+            margin-bottom: 0;
+        }
+}
+
+//блок приєднуйся до соцмереж у футтері
+//позиціювання контенту в блоці приєднуйтесь
+.join-us {
+    padding-left: 70px;
+}
+
+//заголовок
+.join-us__title {
+    text-transform: uppercase;
+    color: $primary-white-color;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+}
+
+// підписка у футері 
+.subscribe {
+    display: flex;
+    margin-left: auto;
+    align-items: end;
+}
+
+//оформлення поля підписки 
+.subscribe__field {
+    display: flex;
+    flex-direction: column;
+    width: 358px;
+    margin-right: 12px;
+    // плейсхолдер підписки 
+    &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.25;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.03em;
+    
+            color: $transp-foot-text-color;
+        }
+}
+
+//заголовок підписки
+.subscribe__label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+
+    margin-bottom: 20px;
+}
+
+// поле вводу email 
+.subscribe__input {
+    height: 50px;
+    color: $primary-white-color;
+    background-color: transparent;
+    padding: 0;
+    padding-left: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+
+
+// кнопка підписатися у футері
+.subscribe__button {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+            background-color: $accent-color-active-button;
+        }
+}
+
+
+// іконка підписки 
+.subscribe__icon {
+    width: 24px;
+    height: 24px;
+    fill: $primary-white-color;
+    margin-left: 10px;
+}
+
+
+//Cтилі для сторінки портфоліо 
+
+// вирівнюємо кнопки фільтрації по горизонталі 
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter__item {
+    margin-right: 8px;
+    &:last-child {
+            margin-right: 0;
+        }
+}
+
+
+// кнопки фільтрації
+.filter__button {
+    color: $primary-text-color;
+    background-color: $calm-button-bg-color;
+    min-width: 73px;
+    height: 38px;
+    width: auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding: 0px 22px;
+
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $primary-white-color;
+        background-color: $accent-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
+}
+
+
+
+// розміщення та геометрія прикладів робіт
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+//
+.example {
+    width: calc((100% - 60px)/3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+    
+    &:nth-last-child(-n+3) {
+        margin-bottom: 0;
+    }
+}
+
+
+// скидуємо оформлення тексту для прикладів роботи 
+.example__link {
+    text-decoration: none;
+    margin: 0;
+    display: block;
+}
+
+// стиль для заголовків прикладів робіт 
+.example__title {
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+    margin-top: 0;
+}
+
+// стиль для опису категорій(типів) робіт
+.example__category {
+    color: $secondary-text-color;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+//зображення прикладів робіт
+.example__img {
+    display: block;
+}
+
+// спливаюче вікно
+.example__pop-up {
+    position: relative;
+    overflow: hidden;
+}
+
+.example__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $accent-color;
+    opacity: 0.9;
+    transform: translatey(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .example:hover &,
+    .example:focus & {
+            opacity: 0.9;
+            transform: translateY(-100%);
+        }
+
+}
+
+
+
+//стиль для детального опису прикладів робіт
+.example__text {
+    position: absolute;
+    color: $primary-white-color;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    padding: 63px 24px;
+
+    .example:hover &,
+    .example:focus &{
+            opacity: 1;
+        }
+}
+
+
+// нижня рамка прикладив робіт
+.example__description {
+    margin: 0;
+    padding: 20px 24px;
+    border-bottom: 1px solid $bordering-color;
+    border-right: 1px solid $bordering-color;
+    border-left: 1px solid $bordering-color;
+
+}

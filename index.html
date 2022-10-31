@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
     <header class="header">
@@ -51,11 +51,11 @@
                 <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
                 <button data-modal-open class="button hero__button" type="button">Замовити послугу</button>
                     <!-- модальне вікно замовити послугу -->
-                    <div class="backdrop is-hidden" data-modal>
+                    <div class="backdrop backdrop--hidden" data-modal>
                         <div class="order-window">
                             <form class="client-form"> 
                                     <button class='btn-modal-close' data-modal-close>
-                                        <svg class="close" width="12px" height="12px">
+                                        <svg class="btn-modal-close__icon" width="12px" height="12px">
                                             <use href="./images/symbol-defs.svg#icon-close"></use>
                                         </svg>
                                     </button>
@@ -87,7 +87,7 @@
                                     </li>
                                     <li class="form-field">
                                         <label class="form-field__label" for="client-comment" >Коментар</label>
-                                        <textarea class="form-field__input form-field__input--comment" name="client-comment" id="client-comment" placeholder="Введіть текст"></textarea>
+                                        <textarea class="form-field__textarea" name="client-comment" id="client-comment" placeholder="Введіть текст"></textarea>
                                     </li>
                                 </ul>
                                 <div>
@@ -100,7 +100,7 @@
                                         Погоджуюся з розсилкою та приймаю &nbsp<a class="policy__link" href="">Умови договору</a>
                                     </label>  
                                 </div>
-                                <button class="button client-form__button" type="submit">Відправити</button>
+                                <button class="button send-form__button" type="submit">Відправити</button>
                             </form>
                         </div>
                     </div>
