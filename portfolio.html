@@ -17,26 +17,27 @@
 <body>
     <header class="header">
         <!--меню в хедері-->
-        <div class="container main-nav">
+        <div class="container conteiner__main-nav">
+            <!-- меню навігації в хедері ВЕМ-->
             <nav class="nav">
-                <a href="./index.html" class="logo"> <span class="logo-style">Web</span>Studio</a>
+                <a href="./index.html" class="logo"> <span class="logo__first-part">Web</span>Studio</a>
                 <ul class="site-nav list">
-                    <li class="item"><a href="./index.html" class="link">Студія</a></li>
-                    <li class="item"><a href="./portfolio.html" class="link current">Портфоліо</a></li>
-                    <li class="item"><a href="#" class="link">Контакти</a></li>
+                    <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студія</a></li>
+                    <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link site-nav__link--current">Портфоліо</a></li>
+                    <li class="site-nav__item"><a href="#" class="site-nav__link">Контакти</a></li>
                 </ul>
             </nav>
+            <!--контакти в хедері-->
             <ul class="cont-nav list">
-                <li class="item">
-                    <a href="mailto:info@devstudio.com" class="link">
-                        <svg class="icon" width="16px" height="12px">
+                <li class="cont-nav__item">
+                    <a href="mailto:info@devstudio.com" class="cont-nav__link">
+                        <svg class="cont-nav__icon" width="16px" height="16px">
                             <use href="./images/symbol-defs.svg#icon-envelope"></use>
                         </svg>info@devstudio.com</a>
                 </li>
-                <!--контакти в хедері-->
-                <li class="item">
-                    <a href="tel:+380961111111" class="link">
-                        <svg class="icon" width="10px" height="16px">
+                <li class="cont-nav__item">
+                    <a href="tel:+380961111111" class="cont-nav__link">
+                        <svg class="cont-nav__icon" width="10px" height="16px">
                             <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                         </svg>+38 096 111 11 11</a>
                 </li>
@@ -46,151 +47,150 @@
     <main>
         <section class="section">
         <div class="container">
-            <h1 class="section-title visually-hidden">Приклади наших робіт</h1>
-            <!--сховаємо на етапі оформлення-->
+            <h1 class="section__title visually-hidden">Приклади наших робіт</h1>
             <!--фільтри за типом робіт-->
-            <ul class="filter-list list">
-                <li class="item"><button class="button filter" type="button">Усі</button></li>
-                <li class="item"><button class="button filter" type="button">Веб-сайти</button></li>
-                <li class="item"><button class="button filter" type="button">Додатки</button></li>
-                <li class="item"><button class="button filter" type="button">Дизайн</button></li>
-                <li class="item"><button class="button filter" type="button">Маркетинг</button></li>
+            <ul class="filter list">
+                <li class="filter__item"><button class="button filter__button" type="button">Усі</button></li>
+                <li class="filter__item"><button class="button filter__button" type="button">Веб-сайти</button></li>
+                <li class="filter__item"><button class="button filter__button" type="button">Додатки</button></li>
+                <li class="filter__item"><button class="button filter__button" type="button">Дизайн</button></li>
+                <li class="filter__item"><button class="button filter__button" type="button">Маркетинг</button></li>
             </ul>
             <!--матеріал, приклади робіт, для фільтрування-->
             <ul class="examples list">
-                <li class="item">
-                    <a class="example" href="#">
-                        <div class="pop-up">
-                            <img src="./images/techno_chryak.jpg" class="examples-img" alt="ноутбук з Веб-сайтом Технокряк" width="370">
-                            <div class="overlay">
-                                <p class="example-description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <li class="example">
+                    <a class="example__link" href="#">
+                        <div class="example__pop-up">
+                            <img src="./images/techno_chryak.jpg" class="example__img" alt="ноутбук з Веб-сайтом Технокряк" width="370">
+                            <div class="example__overlay">
+                                <p class="example__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                                 сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                         </div>
-                        <div class="description">
-                            <h2 class="example-title">Технокряк</h2>
-                            <p class="example-category">Веб-сайт</p>
+                        <div class="example__description">
+                            <h2 class="example__title">Технокряк</h2>
+                            <p class="example__category">Веб-сайт</p>
                             
                         </div>                     
                     </a>
                 </li>
-                <li class="item">
-                    <a class="example" href="#">
-                        <div class="pop-up">
-                            <img src="./images/new_orlean_vs.jpg" class="examples-img" alt="Постер New Orlean vs Golden Star" width="370">
-                            <div class="overlay">
-                                <p class="example-description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <li class="example">
+                    <a class="example__link" href="#">
+                        <div class="example__pop-up">
+                            <img src="./images/new_orlean_vs.jpg" class="example__img" alt="Постер New Orlean vs Golden Star" width="370">
+                            <div class="example__overlay">
+                                <p class="example__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                             сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                         </div>
-                        <div class="description">
-                            <h2 class="example-title">Постер New Orlean vs Golden Star</h2>
-                            <p class="example-category">Веб-сайт</p>
+                        <div class="example__description">
+                            <h2 class="example__title">Постер New Orlean vs Golden Star</h2>
+                            <p class="example__category">Веб-сайт</p>
                         </div>
                     </a>
                 </li>
-                <li class="item">
-                    <a class="example" href="#">
-                        <div class="pop-up">
-                            <img src="./images/seafood.jpg" class="examples-img" alt="логотип Ресторану Seafood" width="370">
-                            <div class="overlay">
-                                <p class="example-description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <li class="example">
+                    <a class="example__link" href="#">
+                        <div class="example__pop-up">
+                            <img src="./images/seafood.jpg" class="example__img" alt="логотип Ресторану Seafood" width="370">
+                            <div class="example__overlay">
+                                <p class="example__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                             сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                         </div>
-                        <div class="description"> 
-                            <h2 class="example-title">Ресторан Seafood</h2>
-                            <p class="example-category">Додаток</p>
+                        <div class="example__description"> 
+                            <h2 class="example__title">Ресторан Seafood</h2>
+                            <p class="example__category">Додаток</p>
                         </div>
                     </a>
                 </li>
-                <li class="item">
-                    <a class="example" href="#">
-                        <div class="pop-up">
-                            <img src="./images/prime.jpg" class="examples-img" alt="чорні навушники" width="370">
-                            <div class="overlay">
-                                <p class="example-description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <li class="example">
+                    <a class="example__link" href="#">
+                        <div class="example__pop-up">
+                            <img src="./images/prime.jpg" class="example__img" alt="чорні навушники" width="370">
+                            <div class="example__overlay">
+                                <p class="example__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                             сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>   
                         </div>
-                        <div class="description">
-                            <h2 class="example-title">Проєкт Prime</h2>
-                            <p class="example-category">Маркетинг</p>
+                        <div class="example__description">
+                            <h2 class="example__title">Проєкт Prime</h2>
+                            <p class="example__category">Маркетинг</p>
                         </div>                     
                     </a>
                 </li>
-                <li class="item">
-                    <a class="example" href="#">
-                        <div class="pop-up">
-                            <img src="./images/boxes.jpg" class="examples-img" alt="дві коробки" width="370">
-                            <div class="overlay">
-                                <p class="example-description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <li class="example">
+                    <a class="example__link" href="#">
+                        <div class="example__pop-up">
+                            <img src="./images/boxes.jpg" class="example__img" alt="дві коробки" width="370">
+                            <div class="example__overlay">
+                                <p class="example__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                             сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                         </div>
-                        <div class="description">
-                            <h2 class="example-title">Проєкт Boxes</h2>
-                            <p class="example-category">Додаток</p>
+                        <div class="example__description">
+                            <h2 class="example__title">Проєкт Boxes</h2>
+                            <p class="example__category">Додаток</p>
                         </div>    
                     </a>
                 </li>
-                <li class="item">
-                    <a class="example" href="#">
-                        <div class="pop-up">
-                            <img src="./images/noborders.jpg" class="examples-img" alt="Монітор з сайтом" width="370">
-                            <div class="overlay">
-                                <p class="example-description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <li class="example">
+                    <a class="example__link" href="#">
+                        <div class="example__pop-up">
+                            <img src="./images/noborders.jpg" class="example__img" alt="Монітор з сайтом" width="370">
+                            <div class="example__overlay">
+                                <p class="example__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                             сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                         </div>
-                        <div class="description">
-                            <h2 class="example-title">Inspiration has no Borders</h2>
-                            <p class="example-category">Веб-сайт</p>
+                        <div class="example__description">
+                            <h2 class="example__title">Inspiration has no Borders</h2>
+                            <p class="example__category">Веб-сайт</p>
                         </div>                      
                     </a>
                 </li>
-                <li class="item">
-                    <a class="example" href="#">
-                        <div class="pop-up">
-                            <img src="./images/limited_edition.jpg" class="examples-img" alt="розгорнута книга" width="370">
-                            <div class="overlay">
-                                <p class="example-description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <li class="example">
+                    <a class="example__link" href="#">
+                        <div class="example__pop-up">
+                            <img src="./images/limited_edition.jpg" class="example__img" alt="розгорнута книга" width="370">
+                            <div class="example__overlay">
+                                <p class="example__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                             сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                         </div>
-                        <div class="description">
-                            <h2 class="example-title">Видання Limited Edition</h2>
-                            <p class="example-category">Дизайн</p>
+                        <div class="example__description">
+                            <h2 class="example__title">Видання Limited Edition</h2>
+                            <p class="example__category">Дизайн</p>
                         </div>
                     </a>
                 </li>
-                <li class="item">
-                    <a class="example" href="#">
-                        <div class="pop-up">
-                            <img src="./images/label.jpg" class="examples-img" alt="мітка з написом Lable Tag" width="370">
-                            <div class="overlay">
-                                <p class="example-description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <li class="example">
+                    <a class="example__link" href="#">
+                        <div class="example__pop-up">
+                            <img src="./images/label.jpg" class="example__img" alt="мітка з написом Lable Tag" width="370">
+                            <div class="example__overlay">
+                                <p class="example__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                             сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
                         </div>
-                        <div class="description">
-                            <h2 class="example-title">Проєкт LAB</h2>
-                            <p class="example-category">Дизайн</p>
+                        <div class="example__description">
+                            <h2 class="example__title">Проєкт LAB</h2>
+                            <p class="example__category">Дизайн</p>
                         </div>
                     </a>
                 </li>
-                <li class="item">
-                    <a class="example" href="">
-                        <div class="pop-up">
-                        <img src="./images/growing_bussines.jpg" class="examples-img" alt="Ноутбук з додатком" width="370">
-                        <div class="overlay">
-                            <p class="example-description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
+                <li class="example">
+                    <a class="example__link" href="">
+                        <div class="example__pop-up">
+                        <img src="./images/growing_bussines.jpg" class="example__img" alt="Ноутбук з додатком" width="370">
+                        <div class="example__overlay">
+                            <p class="example__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                             сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         </div>
-                        <div class="description">
-                            <h2 class="example-title">Growing Business</h2>
-                            <p class="example-category">Додаток</p>
+                        <div class="example__description">
+                            <h2 class="example__title">Growing Business</h2>
+                            <p class="example__category">Додаток</p>
                         </div>   
                     </a>
                 </li>
@@ -201,77 +201,81 @@
     <!-- футер -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-information">
-                <div class="logo-and-adr">
-                    <a href="./index.html" class="logo"><span class="logo-style">Web</span>Studio</a>
-                    <address class="footer-adr">
-                        <ul class="footer-adr-list list">
-                            <li class="item">
-                                <a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" class="f-adress" target="_blank"
-                                    rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі
+            <div class="footer__information">
+                <div class="footer__contacts">
+                    <a href="./index.html" class="logo footer__logo"><span class="logo__first-part">Web</span>Studio</a>
+                    <address class="footer__adress-area">
+                        <ul class="adress list">
+                            <li class="adress__item">
+                                <a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" class="adress__link adress__link--white"
+                                    target="_blank" rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі
                                     Українки, 26</a>
                             </li>
-                            <li class="item">
-                                <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+                            <li class="adress__item">
+                                <a href="mailto:info@devstudio.com" class="adress__link">info@devstudio.com</a>
                             </li>
-                            <li class="item">
-                                <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+                            <li class="adress__item">
+                                <a href="tel:+380961111111" class="adress__link">+38 096 111 11 11</a>
                             </li>
                         </ul>
                     </address>
                 </div>
                 <div class="join-us">
-                    <h3 class="title">Приєднуйтесь</h3>
-                    <ul class="social-links list">
+                    <h3 class="join-us__title">Приєднуйтесь</h3>
+                    <ul class="social-area list">
                         <!--прибрати поінтери списку-->
-                        <li class="item">
+                        <li class="social-area__item">
                             <!-- інстаграм -->
-                            <a class="social-area" href="#">
-                                <svg class="icon">
+                            <a class="social-area__link social-area__link--inverse" href="#" aria-label="Instagram">
+                                <span class="visually-hidden">інстаграм</span>
+                                <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="item">
+                        <li class="social-area__item">
                             <!-- твітер -->
-                            <a class="social-area" href="">
-                                <svg class="icon">
+                            <a class="social-area__link social-area__link--inverse" href="#" aria-label="Twitter">
+                                <span class="visually-hidden">твіттер</span>
+                                <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="item">
+                        <li class="social-area__item">
                             <!-- фейсбук -->
-                            <a class="social-area" href="">
-                                <svg class="icon">
+                            <a class="social-area__link social-area__link--inverse" href="#" aria-label="Facebook">
+                                <span class="visually-hidden">фейсбук</span>
+                                <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="item">
+                        <li class="social-area__item">
                             <!-- лінкед ін -->
-                            <a class="social-area" href="">
-                                <svg class="icon">
+                            <a class="social-area__link social-area__link--inverse" href="#" aria-label="LinkedIn">
+                                <span class="visually-hidden">лінкедін</span>
+                                <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                                 </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <form class="subscribe-area">
-                    <div class="subscribe-field">
-                        <label for="subscribe-email">Підпишіться на розсилку</label>
-                        <input type="email" name="subscribe-email" id="subscribe-email" placeholder="E-mail">
+                <form class="subscribe">
+                    <div class="subscribe__field">
+                        <label class="subscribe__label" for="subscribe-email">Підпишіться на розсилку</label>
+                        <input class="subscribe__input" type="email" name="subscribe-email" id="subscribe-email"
+                            placeholder="E-mail">
                     </div>
-                    <button class="button subscribe" type="submit">Підписатися
-                        <svg class="icon">
-                            <use class="subscribe-icon" href="./images/symbol-defs.svg#icon-send"></use>
+                    <button class="button subscribe__button" type="submit">Підписатися
+                        <svg class="subscribe__icon">
+                            <use href="./images/symbol-defs.svg#icon-send"></use>
                         </svg>
                     </button>
                 </form>
             </div>
         </div>
     </footer>
-    
 </body>
 </html>
