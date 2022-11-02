@@ -1,7 +1,10 @@
-//шрифти
-@import'./utils/fonts';
+
 // змінні
 @import'./utils/variables';
+//нормалізація
+@import'./base/normalize';
+//шрифти
+@import'./base/fonts';
 //боді
 @import'./components/common/body';
 //плейсхолдери кнопка, хованка, чистка списку
