@@ -522,10 +522,11 @@ body {
 .policy__icon--checked {
   position: absolute;
   top: 50%;
-  left: 17px;
+  left: 28px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   border-radius: 2px;
+  border-color: #2196F3;
   background: #2196F3;
   width: 16px;
   height: 15px;
@@ -549,6 +550,9 @@ body {
 .policy__checkbox:checked ~ .policy__icon--checked {
   opacity: 1;
   scale: 1;
+}
+.policy__checkbox:checked ~ .policy__icon {
+  border-color: #2196F3;
 }
 
 .policy__link {

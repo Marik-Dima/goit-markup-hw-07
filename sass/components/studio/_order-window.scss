@@ -211,11 +211,12 @@
         position: absolute;
 
         top: 50%;
-        left: 17px;
+        left: 28px;
 
         transform: translateY(-50%);
 
         border-radius: 2px;
+        border-color: $accent-color;
         background: $accent-color;
         width: 16px;
         height: 15px;
@@ -243,6 +244,9 @@
     &:checked~.policy__icon--checked {
         opacity: 1;
         scale: 1;
+    }
+    &:checked~.policy__icon{
+        border-color: $accent-color;
     }
 }
 
