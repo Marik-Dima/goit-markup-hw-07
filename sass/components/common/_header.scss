@@ -1,0 +1,109 @@
+//хедер та навігація
+.header {
+    display: block;
+    border-bottom: 1px solid $bordering-color;
+    background-color: $primary-white-color;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9; //максимальне значення більше тільки у модального вікна
+}
+
+//стиль меню навігації 
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav,
+.cont-nav {
+    @extend %list;
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+// встановлюємо відстань між єлементами меню навігації
+.site-nav__item {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.site-nav__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $primary-text-color;
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    //ховер і фокус у навігації
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    //індикація актикного(поточного) пункту меню(сторінки) у навигації
+    &--current {
+        color: $accent-color;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $accent-color;
+        }
+    }
+}
+
+// контакти у хедері
+.cont-nav {
+    margin-left: auto;
+    flex-direction: row;
+}
+
+.cont-nav__link {
+    display: flex;
+    align-items: center;
+    color: currentColor;
+    text-decoration: none;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.cont-nav__item {
+    color: $secondary-text-color;
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.cont-nav__icon {
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
+}

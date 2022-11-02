@@ -1,0 +1,29 @@
+// загальний опис секцій
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+//для секції без паддінгу зверху
+    &--no-padding-top {
+        padding-top: 0;
+    }
+//вториннний колір фону для секції
+    &--secondary-bkg {
+        background-color: $calm-button-bg-color;
+    }
+
+}
+
+.section__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+//ховаємо захоловок
+    &--hidden{
+            @extend %visually-hidden;
+        }
+}

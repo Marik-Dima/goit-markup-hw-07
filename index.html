@@ -21,14 +21,14 @@
             <!-- меню навігації в хедері ВЕМ-->
             <nav class="nav">
                 <a href="./index.html" class="logo"> <span class="logo__first-part">Web</span>Studio</a>
-                <ul class="site-nav list">
+                <ul class="site-nav">
                     <li class="site-nav__item"><a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a></li>
                     <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфоліо</a></li>
                     <li class="site-nav__item"><a href="#" class="site-nav__link">Контакти</a></li>
                 </ul>
             </nav>
             <!--контакти в хедері-->
-            <ul class="cont-nav list">
+            <ul class="cont-nav">
                 <li class="cont-nav__item">
                     <a href="mailto:info@devstudio.com" class="cont-nav__link">
                         <svg class="cont-nav__icon" width="16px" height="16px">
@@ -49,7 +49,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-                <button data-modal-open class="button hero__button" type="button">Замовити послугу</button>
+                <button data-modal-open class="hero__button" type="button">Замовити послугу</button>
                     <!-- модальне вікно замовити послугу -->
                     <div class="backdrop backdrop--hidden" data-modal>
                         <div class="order-window">
@@ -60,7 +60,7 @@
                                         </svg>
                                     </button>
                                 <h2 class="client-form__title">Залиште свої дані, ми вам передзвонимо</h2>
-                                <ul class="client-form__fields-list list">
+                                <ul class="client-form__fields-list">
                                     <li class="form-field">
                                         <label class="form-field__label" for="client-name" >Ім'я</label>
                                         <input class="form-field__input" type="text" name="client-name" id="client-name" autofocus>
@@ -100,7 +100,7 @@
                                         Погоджуюся з розсилкою та приймаю &nbsp<a class="policy__link" href="">Умови договору</a>
                                     </label>  
                                 </div>
-                                <button class="button send-form__button" type="submit">Відправити</button>
+                                <button class="send-form__button" type="submit">Відправити</button>
                             </form>
                         </div>
                     </div>
@@ -109,8 +109,8 @@
         <!--Інструменти-ВЕМ-->
         <section class="section">
             <div class="container">
-            <h2 class="section__title visually-hidden">Інструменти</h2> <!-- заголовок схований .visually-hidden -->
-            <ul class="instruments-list list">
+            <h2 class="section__title--hidden">Інструменти</h2> <!-- заголовок схований .visually-hidden -->
+            <ul class="card-set">
                 <li class="instrument">
                     <div class="instrument__area">
                         <svg class="instrument__icon">
@@ -154,18 +154,18 @@
         <section class="section section--no-padding-top">
             <div class="container">
                 <h2 class="section__title">Чим ми займаємося</h2>
-                <ul class="service-list list">
-                    <li class="service">
-                        <a href=""><img src="./images/box1.jpg" class="service__img" alt="створення коду" width="370"></a>
-                        <h3 class="service__title">Десктопні додатки</h3>
+                <ul class="card-set">
+                    <li class="proposal">
+                        <a href=""><img src="./images/box1.jpg" class="proposal__img" alt="створення коду" width="370"></a>
+                        <h3 class="proposal__title">Десктопні додатки</h3>
                     </li>
-                    <li class="service">
-                        <a href=""><img src="./images/box2.jpg" class="service__img" alt="створення мобільних додатків" width="370"></a>
-                        <h3 class="service__title">Мобільні додатки</h3>
+                    <li class="proposal">
+                        <a href=""><img src="./images/box2.jpg" class="proposal__img" alt="створення мобільних додатків" width="370"></a>
+                        <h3 class="proposal__title">Мобільні додатки</h3>
                     </li>
-                    <li class="service">
-                        <a href=""><img src="./images/box3.jpg" class="service__img" alt="розробка дизайну" width="370"></a>
-                        <h3 class="service__title">Дизайнерські рішення</h3>
+                    <li class="proposal">
+                        <a href=""><img src="./images/box3.jpg" class="proposal__img" alt="розробка дизайну" width="370"></a>
+                        <h3 class="proposal__title">Дизайнерські рішення</h3>
                     </li>
                 </ul>
             </div>
@@ -175,7 +175,7 @@
         <section class="section section--secondary-bkg">
             <div class="container">
                 <h2 class="section__title">Наша команда</h2>
-                    <ul class="team-list list">
+                    <ul class="card-set">
                         <li class="team-member">
                             <img src="./images/igor_demianenko.jpg" class="team-member__photo"
                                 alt="чоловік з бородою в червоній сорочці та окулярах, шатен"
@@ -183,12 +183,12 @@
                                 <div class="team-member__description">
                                     <h3 class="team-member__title">Ігор Дем'яненко</h3>
                                     <p class="team-member__position">Product Designer</p>
-                                    <ul class="social-area list">
+                                    <ul class="social-area">
                                         <!--прибрати поінтери списку-->
                                         <li class="social-area__item">
                                             <!-- інстаграм -->
                                             <a class="social-area__link" href="#" aria-label="Instagram">
-                                                <span class="visually-hidden">інстаграм</span>
+                                                <span class="social-area__title--hidden">інстаграм</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                                 </svg>
@@ -197,7 +197,7 @@
                                         <li class="social-area__item">
                                             <!-- твітер -->                                 
                                             <a class="social-area__link" href="#" aria-label="Twitter">
-                                                <span class="visually-hidden">твіттер</span>
+                                                <span class="social-area__title--hidden">твіттер</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                                 </svg>
@@ -206,7 +206,7 @@
                                         <li class="social-area__item">                                   
                                             <!-- фейсбук -->
                                             <a class="social-area__link" href="#" aria-label="Facebook">
-                                                <span class="visually-hidden">фейсбук</span>
+                                                <span class="social-area__title--hidden">фейсбук</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                                 </svg>
@@ -215,7 +215,7 @@
                                         <li class="social-area__item">                                  
                                             <!-- лінкед ін -->
                                             <a class="social-area__link" href="#" aria-label="LinkedIn">
-                                                <span class="visually-hidden">лінкедін</span>
+                                                <span class="social-area__title--hidden">лінкедін</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                                                 </svg>
@@ -231,12 +231,12 @@
                                 <div class="team-member__description">
                                     <h3 class="team-member__title">Ольга Рєпіна</h3>
                                     <p class="team-member__position">Frontend Developer</p>
-                                    <ul class="social-area list">
+                                    <ul class="social-area">
                                         <!--прибрати поінтери списку-->
                                         <li class="social-area__item">
                                             <!-- інстаграм -->
                                             <a class="social-area__link" href="#" aria-label="Instagram">
-                                                <span class="visually-hidden">інстаграм</span>
+                                                <span class="social-area__title--hidden">інстаграм</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                                 </svg>
@@ -245,7 +245,7 @@
                                         <li class="social-area__item">
                                             <!-- твітер -->                                   
                                             <a class="social-area__link" href="#" aria-label="Twitter">
-                                                <span class="visually-hidden">твіттер</span>
+                                                <span class="social-area__title--hidden">твіттер</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                                 </svg>
@@ -254,7 +254,7 @@
                                         <li class="social-area__item">
                                             <!-- фейсбук -->
                                             <a class="social-area__link" href="#"  aria-label="Facebook">
-                                                <span class="visually-hidden">фейсбук</span>
+                                                <span class="social-area__title--hidden">фейсбук</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                                 </svg>
@@ -263,7 +263,7 @@
                                         <li class="social-area__item">
                                             <!-- лінкед ін -->
                                             <a class="social-area__link" href="#" aria-label="LinkedIn">
-                                                <span class="visually-hidden">лінкедін</span>
+                                                <span class="social-area__title--hidden">лінкедін</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                                                 </svg>
@@ -279,12 +279,12 @@
                                 <div class="team-member__description">
                                     <h3 class="team-member__title">Микола Тарасов</h3>
                                     <p class="team-member__position">Marketing</p>
-                                    <ul class="social-area list">
+                                    <ul class="social-area">
                                         <!--прибрати поінтери списку-->
                                         <li class="social-area__item">
                                             <!-- інстаграм -->
                                             <a class="social-area__link" href="#" aria-label="Instagram">
-                                                <span class="visually-hidden">інстаграм</span>
+                                                <span class="social-area__title--hidden">інстаграм</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                                 </svg>
@@ -293,7 +293,7 @@
                                         <li class="social-area__item">
                                             <!-- твітер -->                                 
                                             <a class="social-area__link" href="#" aria-label="Twitter">
-                                                <span class="visually-hidden">твіттер</span>
+                                                <span class="social-area__title--hidden">твіттер</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                                 </svg>
@@ -302,7 +302,7 @@
                                         <li class="social-area__item">
                                             <!-- фейсбук -->
                                             <a class="social-area__link" href="#"  aria-label="Facebook">
-                                                <span class="visually-hidden">фейсбук</span>
+                                                <span class="social-area__title--hidden">фейсбук</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                                 </svg>
@@ -311,7 +311,7 @@
                                         <li class="social-area__item">
                                             <!-- лінкед ін -->
                                             <a class="social-area__link" href="#" aria-label="LinkedIn">
-                                                <span class="visually-hidden">лінкедін</span>
+                                                <span class="social-area__title--hidden">лінкедін</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                                                 </svg>
@@ -327,12 +327,12 @@
                                 <div class="team-member__description">
                                     <h3 class="team-member__title">Михайло Єрмаков</h3>
                                     <p class="team-member__position">UI Designer</p>
-                                    <ul class="social-area list">
+                                    <ul class="social-area">
                                         <!--прибрати поінтери списку-->
                                         <li class="social-area__item">
                                             <!-- інстаграм -->
                                             <a class="social-area__link" href="#" aria-label="Instagram">
-                                                <span class="visually-hidden">інстаграм</span>
+                                                <span class="social-area__title--hidden">інстаграм</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                                 </svg>
@@ -341,7 +341,7 @@
                                         <li class="social-area__item">
                                             <!-- твітер -->                                   
                                             <a class="social-area__link" href="#" aria-label="Twitter">
-                                                <span class="visually-hidden">твіттер</span>
+                                                <span class="social-area__title--hidden">твіттер</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                                 </svg>
@@ -350,7 +350,7 @@
                                         <li class="social-area__item">
                                             <!-- фейсбук -->
                                             <a class="social-area__link" href="#"  aria-label="Facebook">
-                                                <span class="visually-hidden">фейсбук</span>
+                                                <span class="social-area__title--hidden">фейсбук</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                                 </svg>
@@ -359,7 +359,7 @@
                                         <li class="social-area__item">
                                             <!-- лінкед ін -->
                                             <a class="social-area__link" href="#" aria-label="LinkedIn">
-                                                <span class="visually-hidden">лінкедін</span>
+                                                <span class="social-area__title--hidden">лінкедін</span>
                                                 <svg class="social-area__icon">
                                                     <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                                                 </svg>
@@ -375,51 +375,51 @@
         <section class="section">
             <div class="container">
                 <h2 class="section__title">Постійні клієнти</h2>
-                <ul class="clients-list list">
-                    <li class="company" >
-                        <a class="company__link" href="#" aria-label="Компанія 1">
-                            <span class="visually-hidden">Компанія 1</span>
-                            <svg class="company__icon">
+                <ul class="card-set">
+                    <li class="customer" >
+                        <a class="customer__link" href="#" aria-label="Компанія 1">
+                            <span class="customer__name--hidden">Компанія 1</span>
+                            <svg class="customer__icon">
                                 <use href=".//images/symbol-defs.svg#icon-logo1"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="company">
-                        <a class="company__link" href="#" aria-label="Компанія 2">
-                            <span class="visually-hidden">Компанія 2</span>
-                            <svg class="company__icon">
+                    <li class="customer">
+                        <a class="customer__link" href="#" aria-label="Компанія 2">
+                            <span class="customer__name--hidden">Компанія 2</span>
+                            <svg class="customer__icon">
                                 <use href=".//images/symbol-defs.svg#icon-logo2"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="company">
-                        <a class="company__link" href="#" aria-label="Компанія 3">
-                            <span class="visually-hidden">Компанія 3</span>
-                            <svg class="company__icon">
+                    <li class="customer">
+                        <a class="customer__link" href="#" aria-label="Компанія 3">
+                            <span class="customer__name--hidden">Компанія 3</span>
+                            <svg class="customer__icon">
                                 <use href=".//images/symbol-defs.svg#icon-logo3"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="company">
-                        <a class="company__link" href="#" aria-label="Компанія 4">
-                            <span class="visually-hidden">Компанія 4</span>
-                            <svg class="company__icon">
+                    <li class="customer">
+                        <a class="customer__link" href="#" aria-label="Компанія 4">
+                            <span class="customer__name--hidden">Компанія 4</span>
+                            <svg class="customer__icon">
                                 <use href=".//images/symbol-defs.svg#icon-logo4"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="company">
-                        <a class="company__link" href="#" aria-label="Компанія 5">
-                            <span class="visually-hidden">Компанія 5</span>
-                            <svg class="company__icon">
+                    <li class="customer">
+                        <a class="customer__link" href="#" aria-label="Компанія 5">
+                            <span class="customer__name--hidden">Компанія 5</span>
+                            <svg class="customer__icon">
                                 <use href=".//images/symbol-defs.svg#icon-logo5"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="company">
-                        <a class="company__link" href="#" aria-label="Компанія 6">
-                            <span class="visually-hidden">Компанія 6</span>
-                            <svg class="company__icon">
+                    <li class="customer">
+                        <a class="customer__link" href="#" aria-label="Компанія 6">
+                            <span class="customer__name--hidden">Компанія 6</span>
+                            <svg class="customer__icon">
                                 <use href=".//images/symbol-defs.svg#icon-logo6"></use>
                             </svg>
                         </a>
@@ -436,7 +436,7 @@
                 <div class="footer__contacts">
                     <a href="./index.html" class="logo footer__logo"><span class="logo__first-part">Web</span>Studio</a>
                     <address class="footer__adress-area">
-                        <ul class="adress list">
+                        <ul class="adress">
                             <li class="adress__item">
                                 <a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" class="adress__link adress__link--white" target="_blank"
                                     rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі
@@ -453,12 +453,12 @@
                 </div>
                 <div class="join-us">
                     <h3 class="join-us__title">Приєднуйтесь</h3>
-                    <ul class="social-area list">
+                    <ul class="social-area">
                         <!--прибрати поінтери списку-->
                         <li class="social-area__item">
                             <!-- інстаграм -->
                             <a class="social-area__link social-area__link--inverse" href="#" aria-label="Instagram">
-                                <span class="visually-hidden">інстаграм</span>
+                                <span class="social-area__title--hidden">інстаграм</span>
                                 <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                 </svg>
@@ -467,7 +467,7 @@
                         <li class="social-area__item">
                             <!-- твітер -->
                             <a class="social-area__link social-area__link--inverse" href="#" aria-label="Twitter">
-                                <span class="visually-hidden">твіттер</span>
+                                <span class="social-area__title--hidden">твіттер</span>
                                 <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                 </svg>
@@ -476,7 +476,7 @@
                         <li class="social-area__item">
                             <!-- фейсбук -->
                             <a class="social-area__link social-area__link--inverse" href="#"  aria-label="Facebook">
-                                <span class="visually-hidden">фейсбук</span>
+                                <span class="social-area__title--hidden">фейсбук</span>
                                 <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                 </svg>
@@ -485,7 +485,7 @@
                         <li class="social-area__item">
                             <!-- лінкед ін -->
                             <a class="social-area__link social-area__link--inverse" href="#" aria-label="LinkedIn">
-                                <span class="visually-hidden">лінкедін</span>
+                                <span class="social-area__title--hidden">лінкедін</span>
                                 <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                                 </svg>
@@ -498,7 +498,7 @@
                         <label class="subscribe__label"for="subscribe-email">Підпишіться на розсилку</label>
                         <input class="subscribe__input"type="email" name="subscribe-email" id="subscribe-email" placeholder="E-mail">
                     </div>
-                    <button class="button subscribe__button" type="submit">Підписатися
+                    <button class="subscribe__button" type="submit">Підписатися
                         <svg class="subscribe__icon">
                             <use href="./images/symbol-defs.svg#icon-send"></use>
                         </svg> 

@@ -1,0 +1,44 @@
+//стилі для постійних клієнтів 
+
+.customer {
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+}
+
+.customer__name {
+    &--hidden {
+        @extend %visually-hidden;
+    }
+
+}
+
+
+.customer__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $clients-border-color;
+    border-radius: 4px;
+    color: $clients-border-color;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        border-color: $accent-color;
+    }
+}
+
+.customer__icon {
+    height: 60px;
+    width: 106px;
+    fill: currentColor;
+}

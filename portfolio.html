@@ -21,14 +21,14 @@
             <!-- меню навігації в хедері ВЕМ-->
             <nav class="nav">
                 <a href="./index.html" class="logo"> <span class="logo__first-part">Web</span>Studio</a>
-                <ul class="site-nav list">
+                <ul class="site-nav">
                     <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студія</a></li>
                     <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link site-nav__link--current">Портфоліо</a></li>
                     <li class="site-nav__item"><a href="#" class="site-nav__link">Контакти</a></li>
                 </ul>
             </nav>
             <!--контакти в хедері-->
-            <ul class="cont-nav list">
+            <ul class="cont-nav">
                 <li class="cont-nav__item">
                     <a href="mailto:info@devstudio.com" class="cont-nav__link">
                         <svg class="cont-nav__icon" width="16px" height="16px">
@@ -47,17 +47,17 @@
     <main>
         <section class="section">
         <div class="container">
-            <h1 class="section__title visually-hidden">Приклади наших робіт</h1>
+            <h1 class="section__title--hidden">Приклади наших робіт</h1>
             <!--фільтри за типом робіт-->
-            <ul class="filter list">
-                <li class="filter__item"><button class="button filter__button" type="button">Усі</button></li>
-                <li class="filter__item"><button class="button filter__button" type="button">Веб-сайти</button></li>
-                <li class="filter__item"><button class="button filter__button" type="button">Додатки</button></li>
-                <li class="filter__item"><button class="button filter__button" type="button">Дизайн</button></li>
-                <li class="filter__item"><button class="button filter__button" type="button">Маркетинг</button></li>
+            <ul class="card-set filter">
+                <li class="filter__item"><button class="filter__button" type="button">Усі</button></li>
+                <li class="filter__item"><button class="filter__button" type="button">Веб-сайти</button></li>
+                <li class="filter__item"><button class="filter__button" type="button">Додатки</button></li>
+                <li class="filter__item"><button class="filter__button" type="button">Дизайн</button></li>
+                <li class="filter__item"><button class="filter__button" type="button">Маркетинг</button></li>
             </ul>
             <!--матеріал, приклади робіт, для фільтрування-->
-            <ul class="examples list">
+            <ul class="card-set examples">
                 <li class="example">
                     <a class="example__link" href="#">
                         <div class="example__pop-up">
@@ -205,7 +205,7 @@
                 <div class="footer__contacts">
                     <a href="./index.html" class="logo footer__logo"><span class="logo__first-part">Web</span>Studio</a>
                     <address class="footer__adress-area">
-                        <ul class="adress list">
+                        <ul class="adress">
                             <li class="adress__item">
                                 <a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" class="adress__link adress__link--white"
                                     target="_blank" rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі
@@ -222,12 +222,12 @@
                 </div>
                 <div class="join-us">
                     <h3 class="join-us__title">Приєднуйтесь</h3>
-                    <ul class="social-area list">
+                    <ul class="social-area">
                         <!--прибрати поінтери списку-->
                         <li class="social-area__item">
                             <!-- інстаграм -->
                             <a class="social-area__link social-area__link--inverse" href="#" aria-label="Instagram">
-                                <span class="visually-hidden">інстаграм</span>
+                                <span class="social-area__title--hidden">інстаграм</span>
                                 <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                 </svg>
@@ -236,7 +236,7 @@
                         <li class="social-area__item">
                             <!-- твітер -->
                             <a class="social-area__link social-area__link--inverse" href="#" aria-label="Twitter">
-                                <span class="visually-hidden">твіттер</span>
+                                <span class="social-area__title--hidden">твіттер</span>
                                 <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                 </svg>
@@ -245,7 +245,7 @@
                         <li class="social-area__item">
                             <!-- фейсбук -->
                             <a class="social-area__link social-area__link--inverse" href="#" aria-label="Facebook">
-                                <span class="visually-hidden">фейсбук</span>
+                                <span class="social-area__title--hidden">фейсбук</span>
                                 <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                 </svg>
@@ -254,7 +254,7 @@
                         <li class="social-area__item">
                             <!-- лінкед ін -->
                             <a class="social-area__link social-area__link--inverse" href="#" aria-label="LinkedIn">
-                                <span class="visually-hidden">лінкедін</span>
+                                <span class="social-area__title--hidden">лінкедін</span>
                                 <svg class="social-area__icon">
                                     <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                                 </svg>
@@ -268,7 +268,7 @@
                         <input class="subscribe__input" type="email" name="subscribe-email" id="subscribe-email"
                             placeholder="E-mail">
                     </div>
-                    <button class="button subscribe__button" type="submit">Підписатися
+                    <button class="subscribe__button" type="submit">Підписатися
                         <svg class="subscribe__icon">
                             <use href="./images/symbol-defs.svg#icon-send"></use>
                         </svg>

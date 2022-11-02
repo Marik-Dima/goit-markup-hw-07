@@ -1,0 +1,58 @@
+//посилання на соціальні мережі в картках тіммейтів
+.social-area {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-area__title {
+    &--hidden {
+        @extend %visually-hidden;
+    }
+
+}
+
+//відстань між областями соціальних мереж і чистка після останнього елементу
+.social-area__item {
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+// посилання на соціальну мережу
+.social-area__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $clients-border-color;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        color: $primary-white-color;
+    }
+
+    //для футера інверс
+    &--inverse {
+        color: $primary-white-color;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+}
+
+// іконка соціальної мережі
+.social-area__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}

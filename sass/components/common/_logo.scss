@@ -1,0 +1,25 @@
+//логотип
+.logo {
+    margin-right: 93px;
+    color: $pure-black-color;
+    padding: 10px 0;
+
+    font-family: $logo-font, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+//перша частина лого 
+.logo__first-part {
+    color: $accent-color;
+}
+
+// зміна кольору лого в футері */
+.footer__logo {
+    color: $primary-white-color;
+    margin-right: 0;
+    padding: 0;
+}

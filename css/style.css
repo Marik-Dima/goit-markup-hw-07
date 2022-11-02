@@ -795,10 +795,7 @@ body {
     padding-top: 20px;
     width: 231px;
 }
-/* перелік контактів(адресс) у футері */
-.adress{
 
-}
 /* зміна кольору лого в футері */
 .footer__logo{
     color:var(--primary-white-color);

@@ -1,0 +1,5 @@
+//cекція инструменти
+.card-set {
+    @extend %list;
+    display: flex;
+}
